@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface LibraryDao {
 
-    // ---------- CREATE ----------
+    // CREATE
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertBook(book: BookEntity): Long
 
@@ -19,7 +19,7 @@ interface LibraryDao {
     @Insert
     suspend fun insertBooking(booking: BookingEntity): Long
 
-    // ---------- READ ----------
+    // READ
     @Query("SELECT * FROM books ORDER BY title ASC")
     fun getAllBooks(): Flow<List<BookEntity>>
 
@@ -42,7 +42,7 @@ interface LibraryDao {
     )
     fun getActiveBookings(): Flow<List<BookingWithBook>>
 
-    // ---------- UPDATE ----------
+    // UPDATE
     @Query("UPDATE bookings SET returnDeadline = :newDeadline WHERE bookingId = :bookingId")
     suspend fun updateReturnDeadline(bookingId: Int, newDeadline: Long)
 
@@ -52,7 +52,7 @@ interface LibraryDao {
     @Query("UPDATE books SET isAvailable = :available WHERE bookId = :bookId")
     suspend fun setBookAvailability(bookId: Int, available: Boolean)
 
-    // ---------- DELETE ----------
+    // DELETE
     @Query("DELETE FROM bookings WHERE bookingId = :bookingId")
     suspend fun deleteBooking(bookingId: Int)
 }
