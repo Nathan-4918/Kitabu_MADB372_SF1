@@ -97,8 +97,3 @@ To reset the sample data, uninstall the app or clear its storage and run it agai
 
 ### Renew / return / cancel
 ![Lifecycle actions](docs/screenshots/lifecycle.png)
-
-## Notes
-
-- Database changes use `fallbackToDestructiveMigration` during development.
-- Out of scope per the brief: cloud services, authentication, and late fees.
