@@ -1,7 +1,6 @@
 # Kitabu - Library Book Rental & Reservation System
 
-Native Android app built for MADB372 (Mobile Application Development B) at STADIO.
-Students can browse a library catalogue, reserve books, and manage their rentals
+This is a native Android app built for students  and they can browse a library catalogue, reserve books, and manage their rentals
 (collect, renew, return, cancel) with all data stored locally on the device.
 
 **Student:** Nathan van huyssteen | **Module:** MADB372 | **Assignment:** SF1
